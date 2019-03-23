@@ -43,7 +43,8 @@ Explanations of the script :
 	
 	- It contains one loop that goes through the directory in 'path' and parses each html file in the directory in alphabetical order. 
 	
-	- It first reads in each html file with codecs, 
+	- Inside the loop, the program
+	*	first reads in each html file with codecs, 
 	*	then uses BeautifulSoup to extract the paragraphs from it,
 	*	changes the numbers to spoken form using the help functions and inflect, 
 	*	changes it back into one string using the reduce operation from functools and a help function,
