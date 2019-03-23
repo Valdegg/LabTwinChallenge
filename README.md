@@ -22,7 +22,7 @@ Running instructions:
 *	 string 
 
 
--	At the top, there are two variables that represent the output file and the folder it is in. Their values need to be changed by the user before running the program.
+-	At the top, there are two variables that represent the output file and the folder it is in. Their values might need to be changed by the user before running the program.
 
 *	result_name = "papers_aggregated.txt"
 		
@@ -34,6 +34,7 @@ Running instructions:
 
 
 - Then it can be run from the command line with "python labtwin_data_normalization.py".
+- After running the output should be in path/result_name.
 	
 	
 Explanations of the script : 
