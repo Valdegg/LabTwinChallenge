@@ -42,14 +42,14 @@ Explanations of the script :
 	
 	- It contains one loop that goes through the directory in 'path' and parses each html file in the directory in alphabetical order. 
 	
-	- It first reads in the html file with codecs, 
+	- It first reads in each html file with codecs, 
 	*	then uses BeautifulSoup to extract the paragraphs from it,
 	*	changes the numbers to spoken form using the help functions and inflect, 
 	*	changes it back into one string using the reduce operation from functools and a help function,
-	*	converts the result into printed ascii using uncodedata,
+	*	converts the result into printed ascii using unicodedata,
 	*	throws away URLs using a regular expression,
-	*	removes punctuation from it
-	*	and finally writes it to the file, along with a seperator in between papers:
+	*	removes punctuation 
+	*	and finally writes the result to the file, along with a seperator in between papers:
 	-		"\n" + "*** Original paper file name: " + file_name  + " ***\n\n"
 	
 	*More details are in the comments in the script. 
