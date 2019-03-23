@@ -39,7 +39,7 @@ Running instructions:
 	
 Explanations of the script : 
 
-	- The script has 7 functions that do some string operations which have docstrings that should explain what they do.
+	- The script has 7 functions that do some string operations (with docstrings for detailed explanation) .
 	
 	- It contains one loop that goes through the directory in 'path' and parses each html file in the directory in alphabetical order. 
 	
