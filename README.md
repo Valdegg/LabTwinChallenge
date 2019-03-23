@@ -24,7 +24,7 @@ Running instructions:
 
 *	result_name = "papers_aggregated.txt"
 		
-* # 'result_name' is the name of the file which will contain the aggregate of the files 
+*		 # 'result_name' is the name of the file which will contain the aggregate of the files 
 *		 # intially it should be an empty file
 	 
 *	path = "C:/Users/Valdi/Documents/papers/"
