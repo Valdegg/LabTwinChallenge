@@ -22,7 +22,7 @@ It uses the following libraries which need to be installed to run it:
 *	 string 
 
 
--	At the top, there are two variables that represent the output file and the folder it is in. Their values might need to be changed by the user before running the program.
+-	At the top, there are two variables that represent the output file (originally empty) and the folder it is in. Their values might need to be changed by the user before running the program.
 
 *	result_name = "papers_aggregated.txt"
 		
