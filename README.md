@@ -33,7 +33,7 @@ Running instructions:
 *		 # 'path' is the folder which contains the papers and an initially empty text file whose name is the value of 'result_name'
 
 
-- Then running it should be as simple as writing "python labtwin_data_normalization.py" in the command line when in the current directory.
+- Then it can be run from the command line with "python labtwin_data_normalization.py".
 	
 	
 Explanations of the script : 
