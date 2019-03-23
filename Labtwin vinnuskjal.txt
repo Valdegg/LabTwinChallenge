@@ -1,0 +1,313 @@
+Labtwin Challenge
+    22/03/19
+   
+   
+    Part 1: Data Normalization
+   
+        To do:
+       
+            lesa skjalið
+            mindmappa það
+           
+            skoða gögnin
+                skima yfir 7 skjöl og sjá mynstur
+               
+                mynstur:
+               
+                    SI-einingar, efnafræðiheiti
+           
+                bera saman við HTML kóðann          
+                    sub og superscript, italic, °, kóðað með html
+                    Figs sem eru ekki þarna
+           
+            Lesa guide um hvernig á að umbreyta html textaskjali í ascii
+                nota html2text
+					nei beautifulsoup aulinn þinn 
+					
+            Gera kóða:
+                labtwin_data_normalization.py
+               
+                lesa eitt skjal fyrst, efsta í stafrófsröð
+				
+				
+           
+				kominn með ascii en vantar newline 
+					\n má vera 
+					hvað er seinna viðfangið í encode('ascii','ignore')?
+					þetta var því þetta voru bitastrengir 
+					
+				replace µ with micro 
+				
+				hvar eru actual newlines og hvað er added?
+					hvað er <sub> í html? 
+					
+				get fjarlægt öll newlines úr html fælnum 
+					breytir það merkingunni?
+					ætti ekki að gera það
+					þetta eru ekki raw \n heldur fkn bitastrengir 
+					
+				beautifulsoup?
+					Já
+					safnaði saman paragraphs í lista og skeytti saman aftur og eyddi \n í lokin
+					
+				Það er b í byrjun allra fæla (sem skoðaðir hafa verið hingað til)
+					binary file. decoded
+					
+				nú eru formúlurnar allar með auka línubil. Þær koma þannig úr Beautifoul Soup. ignore them ! 
+		  
+		  
+				'\b\w+\b' finnur orð 
+				
+				remove links
+				
+				Change numbers to spoken form 
+					
+					 br2699 
+						ef í sama orði og bókstafir, þá hver tölustafur lesinn 
+					
+					  method 273031 bac dnas were digested w
+						ef stakt orð þá eins og tala 
+				
+					15th 
+						-th hlýtur að vera í boði í 
+						
+					Finna orðin (allt sem er ekki bil) 
+						Finna þau orð sem innihalda tölustafi 
+							Þau orð 
+					
+		  
+            Fallvæða
+           
+            Hafa docstrings
+			
+			breyta falllýsingum í docstrings 
+           
+           
+			Testa 
+				eru þetta bara printable? 
+				
+				er munur að hafa escape_all = True og False?
+				
+				
+           
+		printable != ekki control 
+			
+			printable taflan skoða aftur 
+		   
+            Setja á Github
+                gögnin líka
+                vísa í þau í skjalinu
+           
+        Myndi gera:
+           
+            checka á domain expert hvort tilgátur mínar séu réttar
+            um að
+                útlenskir stafir komi bara fyrir í jöfnum
+               
+            finna út hvað er mikilvægast
+                útlenskir stafir koma fyrir í einingum líka, sem skipta máli
+               
+            Gæti formlega identifyað öll  html element til að vita hvað myndi vanta, sortera þau og hafa til hliðar til að bæta við
+       
+			varpa hlutum eins og µ í micro 
+				sub í _, sup í ^ 
+				° í degrees
+				– í -
+				it's í it is 
+				
+	   
+        Pælingar:
+           
+            hvað er special character nákvæmlega?
+                There are 95 printable characters in total.
+               
+                hvernig velur maður bara special characters með python nlp?
+               
+                er newline printable?
+                    nei
+                   
+            mögulegir fokk stafir:
+                sub og superscript
+                grískir stafir
+                    koma fyrir í jöfnum
+                   
+            Hvaða special stafir ættu að vera með?
+                þeir sem eru einingar
+               
+               
+                   
+               
+            Hvað þýða nöfnin á greinunum?
+           
+            Á hvaða sniði ætti útkoman að vera?
+                textaskjal?
+                html skjal?
+               
+                Files that contain markup or other meta-data are generally considered plain-text, as long as the entirety remains in directly human-readable form (as in HTML, XML, and so on (as Coombs, Renear, and DeRose argue,[3] punctuation is itself markup).
+               
+                Ég er að sleppa meta-data svo .txt er málið
+               
+               
+           
+           
+		   
+			   
+Assumptions:
+	All the text is contained in the <p> paragraphs 
+	
+
+Between all two papers, I added a line with *** Original paper file name: FILENAME ***, to indicate from where the text below comes from.
+   
+Since punctuation was removed, I removed links also (since they became httpUglycom).
+   
+What other techniques would you apply to use these papers in the best way to train a transcription model?
+
+	The next step from what we have now would be to convert special symbols to spoken form. First from ASCII to UTF-8 or something similar (or just keep the original data haha) and then to make a transformation that turns '°' into 'degrees', µ into 'micro', "it's" into 'it is" etc.
+	I'm guessing that it is a problem that has already been solved to a high degree. 
+	Include capital letters when they have meaning, such as in acronyms, since PCR and DNA are important words.
+	
+	Have it context dependent, use some information from the environment the word appears in (the sentence it is in, the paragraph it is in, the paper it is in, what kind of paper it is)
+	
+	Do some visualizations to get insight into what is contained in the papers, such as ___,  to see which papers . Or better yet, Use the keywords from the papers to classify them. Maybe the authors' fields of expertise also (datamine researchgate or linkedin?)
+	
+   
+    Part 2: Model Performance Measurement
+       
+        To do:
+           
+            varpa vangaveltum á vinina
+       
+			googla transcription data preprocessing
+				fyrir bæði lið 1 og 2 
+       
+        Pælingar:
+   
+            hvað er átt við með að integratea inn í modelið?
+           
+           
+           
+        Spurningar:
+       
+            How would you keep track of the overall transcription model performance, over time?
+ 
+                define performance
+				
+				
+               
+                    define the problem
+                       
+                        what is transcription?
+							Converting audio recordings of speech to text that people can understand.
+							The transcriber can mishear and write the wrong word down. A perfect transcriber always writes the right words. 
+							Having worked as a transcriber myself I'm familiar with the human errors - mostly typos due to being in a hurry.  This isn't a big problem  with an artificial transcriber.
+							Sometimes you hear the wrong word, but a human transcriber understands the context so you can get confused for a while but usually figure it out. This is a bigger problem for artificial transcribers. 
+							
+							Therefore the main indicator for good automatic transcription is 'word error rate'
+							Sometimes ... is used 
+							
+                            
+                   
+                    number of correctly classified words
+                    weighted by how important they are?
+                        If the mistranscribed word is familiar to the scientist then he is likely to spot the error
+                            all words are his own so he should actually always spot the errors
+                           
+                    The WER would be compared to human transcribers and I guess the goal is to achieve at leas the same rate as a good lab assistant and pass the labtwin turing test. 
+               
+                have test sets to test the performance on
+               
+                compare to human transcribers
+               
+            Which KPIs are relevant?
+           
+                Word error rate
+           
+            What kind of (acoustic) data would you generate?
+           
+                Have the best non-specific transcriber read them?
+				That doesn't seem to work so well because it isn't familiar with the specialized vocabulary. Having a person with domain knowledge and english skills to oversee it would help.
+				Maybe it'd be possible to analyze which technical terms are important and 
+					
+				
+				Láta líffræðinemendur lesa upp 
+				
+					Þarf að vera noise í bakgrunni 
+				
+				passa að cross validatea rétt 
+				
+				eiga alltaf afgangs test gögn 
+				
+				Training / Tuning / Validation 
+				
+				skipta um módel þjálfa það 
+				
+			Sp 2 
+			
+				People who use the transcriber generate data with their use. 
+					could have some kind of rating system, where the user can let us know if the transcription was good or not (with a written description of the semantic error)
+					
+					Succesful user-generated transcriptions can be used as both training data and test data. 
+					
+				Factors that cause bias are
+					Mother Tongue 
+					Biological Field of Specialization
+					English Proficiency Level
+					Education Level
+					the circumstances which is recorded in 
+						(open window? others talking? 
+					the recording device (though if it is an iPhone application then it is pretty standard, but could depend on which iPhone version it is or maybe its age)
+						maybe the user is wearing headphones with a microphone. 
+					
+					just to name a few.  
+					
+				If users give their personal information, labelled data would be acquired that could be used to account for some of these problems. 
+				
+				bias gæti verið hreimur, sérsvið líffræðingsins 
+				menntunarstig, þjóðerni, hreimur, sérhæfing
+				búnaðurinn sem tekur þetta upp 
+					iphone app samt 
+					
+					
+					
+					
+					
+Fyrir skýrslu
+
+	bitastrengjavesen 
+	
+	nýtt to do:
+	
+		svara spurningum úr parti 2, v1.0
+		
+		klára forritið, forgangsraðað 
+			gera number to spoken 
+			fallvæða föllin 
+			setja á github 
+		
+		heyra í boys og biðja um feedback 
+			
+		klára að svara spurningum úr parti 2 
+		
+		skrá vinnuferlið 
+		lýsa forritinu
+			hvernig á að keyra það 
+			teikna myndir sem lýsa forritinu 
+		
+		gera stutt readme 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

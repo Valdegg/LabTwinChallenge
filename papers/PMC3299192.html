@@ -1,0 +1,101 @@
+<p>The 7 studies included in this meta-analysis belonged to COGENT and enrolled
+16,388 African American participants. The supplementary text contains a detailed
+description of each participating COGENT study cohort (<xref ref-type="supplementary-material" rid="pgen.1002491.s014">Text S1</xref>).
+All participants self-reported their racial category. Additional clinical
+information was collected by self-report and clinical examination. All
+participants provided written informed consent as approved by local Human
+Subjects Committees. Study participants who were pregnant or had a diagnosis of
+cancer or AIDS at the time of blood count were excluded. We also excluded
+subjects who were outliers in the analysis of genetic ancestry (as determined by
+cluster analysis performed using principal component analysis or
+multi-dimensional scaling) or who had an overall SNP missing rate
+&gt;10%.</p><p>Fasting blood samples for complete blood count (CBC) analysis were obtained by
+venipuncture and collected into tubes containing ethylenediaminetetraacetic
+acid. Platelet counts and MPV were performed at local laboratories using
+automated hematology cell counters and standardized quality assurance
+procedures. <xref ref-type="sec" rid="s4">Methods</xref> used to measure the
+blood traits analyzed in this study have been described previously for ARIC,
+CARDIA, JHS, Health ABC, WHI, and GeneSTAR <xref ref-type="bibr" rid="pgen.1002491-Folsom1">[54]</xref>&#8211;<xref ref-type="bibr" rid="pgen.1002491-Shimakawa1">[58]</xref>. Platelet count was
+reported as 10<sup>9</sup> cells per liter, and was recorded in all 16,388 study
+participants. Information on MPV was available in a subset of 4,612 participants
+from five COGENT study cohorts (ARIC, GeneSTAR, Health ABC, HANDLS, and JHS) and
+was reported in femto liters (10<sup>&#8722;15</sup> L). All the phenotypes were
+approximately normally distributed and we did not perform any data
+transformations.</p><p>Genotyping was performed within each COGENT cohort using methods described in
+<xref ref-type="supplementary-material" rid="pgen.1002491.s014">Text
+S1</xref>. Affymetrix chips were used in the ARIC, CARDIA, JHS, and WHI
+studies and Illumina chips were used in GeneSTAR, HANDLS, and Health ABC. DNA
+samples with a genome-wide genotyping success rate &lt;95%, duplicate
+discordance or sex mismatch between genetic estimates of gender and self-report,
+SNPs with genotyping failure rate &gt;10%, monomorphic SNPs, SNPs with
+minor allele frequency (MAF) &lt;1%, and SNPs that mapped to several
+genomic locations were removed from the analyses. Because African-American
+populations are recently admixed, we did not filter on Hardy-Weinberg
+equilibrium p-value. Instead, significantly associated SNPs were later examined
+for strong deviations from Hardy&#8211;Weinberg equilibrium and/or raw genotype
+data was examined for abnormal clustering. Participants and SNPs passing basic
+quality control were imputed to &gt;2.2 million SNPs based on HapMap II
+haplotype data using a 1&#8758;1 mixture of Europeans (CEU) and Africans (YRI)
+as the reference panel. Details of the genotype imputation procedure are
+described further under Supplemental Methods. Prior to meta-analyses, SNPs were
+excluded if imputation quality metrics (equivalent to the squared correlation
+between proximal imputed and genotyped SNPs) were less than 0.50.</p><p>Differences in platelet count may affect platelet function and aggregation <xref ref-type="bibr" rid="pgen.1002491-Jennings1">[59]</xref>. In
+addition, younger platelets have higher MPV than older platelets and are more
+reactive <xref ref-type="bibr" rid="pgen.1002491-Harker1">[60]</xref>.
+We hypothesized that the genetic variants that determine platelet count and MPV
+may also affect platelet aggregation. To examine this hypothesis, we used
+agonist-mediated platelet aggregation assays, which can provide information
+about the different aspects of platelet aggregation. For these assays, platelet
+aggregation agonists, such as collagen or ADP, are added to whole blood or
+platelet-rich plasma and platelet aggregation is measured after a specified
+amount of time (300 seconds). We performed platelet aggregation assays in the
+participants of the GeneSTAR cohort. Blood samples were obtained as described
+above, and platelet aggregation in whole blood was measured as reported
+previously <xref ref-type="bibr" rid="pgen.1002491-Qayyum1">[57]</xref>. Briefly, in vitro whole blood impedance in a
+Chrono-Log dual-channel lumiaggregometer (Havertown, Pa) was performed after
+samples were stimulated with arachidonic acid (0.5 mmol/L, intra-assay
+CV&#8202;=&#8202;24%), collagen (5 &#181;g/mL; intra-assay
+CV&#8202;=&#8202;9%), or ADP (10 &#181;mol/L; intra-assay
+CV&#8202;=&#8202;46%). Maximal aggregation within 5 minutes of
+agonist stimulation was recorded in ohms.</p><p>For all cohorts, genome-wide association (GWAS) analysis was performed using
+linear regression adjusted for covariates, implemented in either PLINK v1.07, R
+v2.10, or MACH2QTL v1.08 <xref ref-type="bibr" rid="pgen.1002491-Li1">[61]</xref>, <xref ref-type="bibr" rid="pgen.1002491-Purcell1">[62]</xref>. Allelic dosage at each SNP was used as the
+independent variable, adjusted for primary covariates of age, age-squared, sex,
+and clinic site (if applicable). The first 10 principal components were also
+incorporated as covariates in the regression models to adjust for population
+stratification (<xref ref-type="supplementary-material" rid="pgen.1002491.s014">Text S1</xref>). For GeneSTAR, family structure was accounted for in the
+association tests using linear mixed effect (LME) models implemented in R <xref ref-type="bibr" rid="pgen.1002491-Chen1">[63]</xref>. Although the
+JHS has a small number of related individuals, extensive analyses have shown
+that results were concordant using linear regression or LME, after genomic
+control <xref ref-type="bibr" rid="pgen.1002491-Lettre1">[19]</xref>.
+Therefore, results are presented for JHS using linear regression. For imputed
+genotypes, we used dosage information (i.e. a value between 0.0&#8211;2.0
+calculated using the probability of each of the three possible genotypes) in the
+regression model implemented in PLINK or MACH2QTL (for cohorts with unrelated
+individuals) or the Maximum Likelihood Estimation (MLE) routines (for
+GeneSTAR).</p><p>For both platelet phenotypes, meta-analyses were conducted using inverse-variance
+weighted fixed-effect models to combine beta coefficients and standard errors
+from study level regression results for each SNP to derive a combined p-value
+and effect estimate <xref ref-type="bibr" rid="pgen.1002491-Willer1">[64]</xref>. Study level results were corrected for genomic
+inflation factors (&#955;<sub>GC</sub>) by incorporating study specific
+&#955;<sub>GC</sub> estimates into the scaling of the standard errors (SE) of
+the regression coefficients by multiplying the SE by the square-root of the
+genomic inflation factor. The inflation factors for all completed analyses are
+presented in <xref ref-type="supplementary-material" rid="pgen.1002491.s005">Table S1</xref>. To maintain an overall type 1 error rate of 5%, a
+threshold of &#945;&#8202;=&#8202;5&#215;10<sup>&#8722;8</sup> was used
+to declare genome-wide statistical significance. Between-study heterogeneity of
+results was assessed by using Cochrane's Q statistic and the I<sup>2</sup>
+inconsistency metric. Meta-analyses were implemented in the software METAL <xref ref-type="bibr" rid="pgen.1002491-Willer1">[64]</xref> and were
+performed independently by two analysts to confirm results. To examine whether
+there were any differences between males and females, sex-specific GWAS were
+conducted in each cohort. The results for each SNP were pooled and heterogeneity
+of allelic effects between females and males was examined using the
+meta-analysis methods as implemented in GWAMA software <xref ref-type="bibr" rid="pgen.1002491-Magi1">[65]</xref>.</p><p>To assess whether the loci previously reported to be associated with the platelet
+phenotypes in Europeans, Japanese, and African Americans were replicated in the
+COGENT African-Americans, we examined the meta-analysis results for each index
+SNP in the regions previously reported, including consistency of direction of
+effect. If the reported index SNP was not significant at p&lt;0.05 we examined
+adjacent SNPs and reported the closest SNP with p&lt;0.05 along with its
+distance from the index SNP.</p><p>To examine the association of genotype on platelet aggregation in the GeneSTAR
+cohort, linear mixed models were used with additive models adjusting for age and
+sex, and taking into account familial correlation between the individuals.</p>
