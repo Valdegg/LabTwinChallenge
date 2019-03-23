@@ -39,7 +39,7 @@ def newLineCat(string1, string2):
 def  removePunctuation(strengur): 
 	"""Use: without = removePunctuation(strengur)
 	Before: 'strengur' is a string 
-	After: 'without' is a 'strengur' without punctuation """
+	After: 'without' is 'strengur' without punctuation """
 	# note:  words consisting only of punctuation marks give an extra space
 	return ''.join(word.strip(string.punctuation) for word in strengur)
 	
@@ -99,9 +99,9 @@ i = 0
 for file_name in sorted(os.listdir(path)):
 	# Loop invariant: 
 	# The first i html files in 'path' have been written to 'result' in alphabetical order.
-	# The text is lower-case plain ASCII without punctuation and with words in spoken form.
+	# The text is lower-case plain ASCII without punctuation, without links and with words in spoken form.
 	# Paragraphs from the html files are separated by new-lines. 
-	# html files are separated by lines with *** Original paper file name: FILENAME ***
+	# Inside 'result' html files are separated by lines with *** Original paper file name: FILENAME ***
 	
 	if(file_name[-4:] == "html"):
 		
