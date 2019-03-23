@@ -4,7 +4,9 @@
 Explanations and instructions
 
 The answers to the questions are in Labtwin answers.pdf. <br>
-All the code is in labtwin_data_normalization.py. 
+All the code is in labtwin_data_normalization.py. <br>
+<br>
+The output from when I ran it on my computer is in papers_aggregated_result.txt.
 
 Running instructions: 
 
