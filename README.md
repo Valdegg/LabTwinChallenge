@@ -3,7 +3,7 @@
 
 Explanations and instructions
 
-The answers to the questions are in Labtwin answers.pdf. 
+The answers to the questions are in Labtwin answers.pdf. \n
 All the code is in labtwin_data_normalization.py. 
 
 Running instructions: 
