@@ -23,11 +23,11 @@ Running instructions:
 -	At the top, there are two variables that represent the output file and the folder it is in. Their values need to be changed by the user before running the program.
 
 *	result_name = "papers_aggregated.txt"
-		- # 'result_name' is the name of the file which will contain the aggregate of the files 
-		- # intially it should be an empty file
+		 # 'result_name' is the name of the file which will contain the aggregate of the files 
+		 # intially it should be an empty file
 	 
 *	path = "C:/Users/Valdi/Documents/papers/"
-		- # 'path' is the folder which contains the papers and an initially empty text file whose name is the value of 'result_name'
+		 # 'path' is the folder which contains the papers and an initially empty text file whose name is the value of 'result_name'
 
 
 - Then running it should be as simple as writing "python labtwin_data_normalization.py" in the command line when in the current directory.
