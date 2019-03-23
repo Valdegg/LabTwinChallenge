@@ -1,7 +1,5 @@
 # Data Normalization for the Methods and Materials part of 363 papers dealing with genetics, from the US National Library of Medicine National Institutes of Health.
  
- 
- 
 import codecs
 import unicodedata 
 from bs4 import BeautifulSoup
@@ -10,8 +8,6 @@ import os
 import re 
 import inflect 
 import string 
-
-
 
 result_name = "papers_aggregated.txt"
 # 'result_name' is the name of the file which will contain the aggregate of the files
@@ -34,7 +30,6 @@ def newLineCat(string1, string2):
 	After: string3 is the paragraphs with an empty  line in between them """	
 	return string1 + "\n \n" + string2 
 
- 
 
 def  removePunctuation(strengur): 
 	"""Use: without = removePunctuation(strengur)
@@ -56,7 +51,6 @@ def isFloat(inputString):
 	Before: 'inputString' is a word string (no whitespaces)
 	After: b is True iff 'inputString' is a rational number 
 	i.e. is a string of only numbers and one dot in the middle, like 0.1  and isn't an integer like 12"""
-		
 	
 	return inputString.replace('.','',1).isdigit() and not inputString.isdigit()
 	
@@ -90,11 +84,6 @@ def numberToSpoken(strengur):
 	return words3
 
 
-
-	
-
-
-
 i = 0
 for file_name in sorted(os.listdir(path)):
 	# Loop invariant: 
@@ -115,22 +104,20 @@ for file_name in sorted(os.listdir(path)):
 		# all the paragraphs from paper with name 'file_name' are in 'paragraphs'
 		
 		words_no_numbers = [numberToSpoken(paragraph) for paragraph in paragraphs]
-		# words_no_numbers is the paragraphs with number words like 1.5 and 333 changed to spoken form. 
+		# 'words_no_numbers' is the paragraphs with number words like 1.5 and 333 changed to spoken form. 
 		
 		text = functools.reduce( lambda x,y: newLineCat(x,y), words_no_numbers ) 
 		# 'text' is a single string with all paragraphs with an empty line in between 
 		
 
 		text2 = unicodedata.normalize('NFKD',text).encode('ascii','ignore').decode().lower()
-		# 'text2' is text transformed such that it's a string in ASCII (not bytes), in lower case.		
+		# 'text2' is 'text' transformed such that it's a string in ASCII (not bytes), in lower case.		
 
 		text3  = re.sub(r'http\S+', '', text2)
-		# text3 doesn't contain links 
+		# 'text3' doesn't contain links 
 		
-
 		text4 = removePunctuation(text3)		
-		
-		# 'text4' is a string with the contents of the paper from 'file_name', in ASCII, in lower case and without punctuation and with numbers in spoken form 
+		# 'text4' is a string with the contents of the paper from 'file_name', in ASCII, in lower case without punctuation and with numbers in spoken form 
 		
 		result.write("\n" + "*** Original paper file name: " + file_name  + " ***\n\n") 
 		result.write(text4 +"\n") 
