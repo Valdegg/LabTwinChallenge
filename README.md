@@ -49,8 +49,8 @@ Explanations of the script :
 	*	changes it back into one string using the reduce operation from functools and a help function,
 	*	converts the result into printed ascii using unicodedata,
 	*	throws away URLs using a regular expression,
-	*	removes punctuation 
-	*	and finally writes the result to the file, along with a seperator in between papers:
+	*	removes punctuation using a help function
+	*	and finally writes the result to the file, along with the following seperator before each paper:
 	-		"\n" + "*** Original paper file name: " + file_name  + " ***\n\n"
 	
 	*More details are in the comments in the script. 
