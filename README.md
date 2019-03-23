@@ -1,13 +1,13 @@
 # LabTwinChallenge
 
-Labtwin challenge 
 
 Explanations and instructions
 
+The answers to the questions are in Labtwin answers.pdf. 
+All the code is in labtwin_data_normalization.py. 
 
 Running instructions: 
 
--	All the code is in labtwin_data_normalization.py. 
 
 -	It uses the following libraries which need to be installed to run it:
 *	 codecs
