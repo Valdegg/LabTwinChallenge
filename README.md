@@ -11,7 +11,7 @@ The output from when I ran it on my computer is in papers/papers_aggregated_resu
 Running instructions: 
 
 
--	It uses the following libraries which need to be installed to run it:
+It uses the following libraries which need to be installed to run it:
 *	 codecs
 *	 unicodedata 
 *	BeautifulSoup
